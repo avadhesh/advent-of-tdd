@@ -42,4 +42,14 @@ public class TestElfShould {
         smallElf.addCalories(3000);
         assertThat(smallElf.compareTo(bigElf), lessThan(0));
     }
+
+     @Test
+    void carry_sum_of_6000_calories(){
+        Elf bigElf = new Elf();
+        bigElf.addCalories(1000);
+        bigElf.addCalories(2000);
+        bigElf.addCalories(3000);      
+       
+        assertThat(bigElf.getTotalCalories(), equalTo(6000));
+    }
 }
