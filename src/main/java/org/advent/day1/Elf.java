@@ -15,10 +15,14 @@ public class Elf implements Comparable<Elf> {
         return totalCalories;
     }
 
+    public void addCalories(int calories)
+    {
+        totalCalories += calories;
+    }
+
     @Override
     public int compareTo(Elf arg0) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'compareTo'");
+        return Integer.compare(this.totalCalories, arg0.totalCalories) ;
     }
 
 }
